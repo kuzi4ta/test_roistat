@@ -1,7 +1,7 @@
 <?php
 
 include('constants.php');
-include('parse_function.php');
+include('parse_functions.php');
 include('files_functions.php');
 
 function main($argc, $argv)
