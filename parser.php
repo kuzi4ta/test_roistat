@@ -20,8 +20,17 @@ function main($argc, $argv)
 
 	$json = prepare($data);
 
+	if ($json === ERROR_INCORRECT_DATA)
+	{
+		echo ERROR_INCORRECT_DATA_TEXT;
+		return (ERROR_INCORRECT_DATA);
+	}
+
 	if (write_output($json) === ERROR_FAILED_TO_CREATE)
+	{
 		echo ERROR_FAILED_TO_CREATE_TEXT;
+		return (ERROR_FAILED_TO_CREATE);
+	}
 
 	return (SUCCESS);
 }
