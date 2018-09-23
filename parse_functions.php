@@ -43,13 +43,13 @@ function fill_array($arr_prepare, $length, $data)
 		else
 			$arr_prepare['statusCodes'][$data['CODE'][$i]]++;
 
-		if (preg_match("/googlebot/i", $data['CRAWLER'][$i], $matches))
+		if (preg_match("/googlebot/i", $data['CRAWLER'][$i]))
 			$arr_prepare['crawlers']['Google']++;
-		if (preg_match("/bingbot/i", $data['CRAWLER'][$i], $matches))
+		if (preg_match("/bingbot/i", $data['CRAWLER'][$i]))
 			$arr_prepare['crawlers']['Bing']++;
-		if (preg_match("/baiduspider/i", $data['CRAWLER'][$i], $matches))
+		if (preg_match("/baiduspider/i", $data['CRAWLER'][$i]))
 			$arr_prepare['crawlers']['Baidu']++;
-		if (preg_match("/yandexbot/i", $data['CRAWLER'][$i], $matches))
+		if (preg_match("/yandexbot/i", $data['CRAWLER'][$i]))
 			$arr_prepare['crawlers']['Yandex']++;
 	}
 	$arr_prepare['urls'] = count($arr_urls);
